@@ -27,7 +27,7 @@ public class CyberPetApp {
                 case 2:
                     System.out.print("Enter the pet index to feed: ");
                     int feedIndex = in.nextInt();
-                    in.nextLine(); // Consume newline
+                    in.nextLine();
                     System.out.println("\n" + petManager.feedPet(feedIndex) + "\n");
                     break;
                 case 3:
@@ -54,7 +54,7 @@ public class CyberPetApp {
     /**
      * Prints the main menu options.
      */
-    private static void printMenu() {
+    public static void printMenu() {
         System.out.println("----- CYBER PET MENU -----");
         System.out.println("1) Add a Pet");
         System.out.println("2) Feed a Pet");
@@ -69,7 +69,7 @@ public class CyberPetApp {
     /**
      * Prints the menu for adding a pet and handles the selection.
      */
-    private static void printAddPetMenu() {
+    public static void printAddPetMenu() {
         System.out.println("\nPet Types:");
         System.out.println(" 1) DragonPet");
         System.out.println(" 2) SlimePet");
@@ -77,7 +77,7 @@ public class CyberPetApp {
         System.out.print("Select pet type (1-3): ");
 
         int petType = in.nextInt();
-        in.nextLine(); // Consume newline
+        in.nextLine();
 
         switch (petType) {
             case 1:
@@ -97,7 +97,7 @@ public class CyberPetApp {
     /**
      * Adds a dragon pet to the pet manager.
      */
-    private static void addDragon() {
+    public static void addDragon() {
         System.out.print("Enter pet name for DragonPet: ");
         String name = in.nextLine();
 
@@ -108,7 +108,7 @@ public class CyberPetApp {
     /**
      * Adds a slime pet to the pet manager.
      */
-    private static void addSlime() {
+    public static void addSlime() {
         System.out.print("Enter color for SlimePet: ");
         String color = in.nextLine();
 
@@ -119,7 +119,7 @@ public class CyberPetApp {
     /**
      * Adds an astral kitten pet to the pet manager.
      */
-    private static void addAstralKitten() {
+    public static void addAstralKitten() {
         AstralKitten kitten = new AstralKitten("Low", 1);
         System.out.println("AstralKitten added!\n");
         petManager.addPet(kitten);
@@ -128,10 +128,10 @@ public class CyberPetApp {
     /**
      * Handles playing with a pet using a specified toy.
      */
-    private static void playToy() {
+    public static void playToy() {
         System.out.print("Enter the pet index to play with: ");
         int playIndex = in.nextInt();
-        in.nextLine(); // Consume newline
+        in.nextLine();
 
         System.out.print("Enter toy name: ");
         String toy = in.nextLine();
